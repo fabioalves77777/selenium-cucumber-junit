@@ -1,5 +1,5 @@
 package br.com.nameproject.support;
-
+/*
 import java.awt.AWTException;
 import java.awt.GraphicsConfiguration;
 import java.awt.Rectangle;
@@ -41,3 +41,4 @@ public class VideoHelper extends ScreenRecorder {
         return new File(movieFolder, name + "-" + dateFormat.format(new Date()) + "." + Registry.getInstance().getExtension(fileFormat));
     }
 }
+*/

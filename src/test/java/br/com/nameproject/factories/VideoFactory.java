@@ -1,5 +1,5 @@
 package br.com.nameproject.factories;
-
+/*
 import static org.monte.media.FormatKeys.EncodingKey;
 import static org.monte.media.FormatKeys.FrameRateKey;
 import static org.monte.media.FormatKeys.KeyFrameIntervalKey;
@@ -80,3 +80,4 @@ public class VideoFactory {
         this.screenRecorder.stop();
     }
 }
+*/

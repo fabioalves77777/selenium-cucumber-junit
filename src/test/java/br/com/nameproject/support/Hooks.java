@@ -4,7 +4,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
 import br.com.nameproject.factories.DriverFactory;
-import br.com.nameproject.factories.VideoFactory;
+//import br.com.nameproject.factories.VideoFactory;
 import br.com.nameproject.models.ConfiguracaoAmbiente;
 import io.cucumber.core.api.Scenario;
 import io.cucumber.java.After;
@@ -16,13 +16,13 @@ public class Hooks {
 	
 	public ConfiguracaoAmbiente _configuracao;
 	public DriverFactory _driver;
-	VideoFactory _videoReord = new VideoFactory(); 
+	//VideoFactory _videoReord = new VideoFactory(); 
 	
 	@Before
 	public void initialize(Scenario cenario) throws Exception {	
 		_configuracao = new ConfiguracaoAmbiente();
 		_driver = new DriverFactory(_configuracao);
-		_videoReord.startRecording(cenario.getName());
+		//_videoReord.startRecording(cenario.getName());
 		System.out.println("Before: Initialize Feature");
 	}
 	
@@ -40,7 +40,7 @@ public class Hooks {
 	
 	@After
 	public void tearDown(Scenario cenario) throws Exception {
-		_videoReord.stopRecording();
+		//_videoReord.stopRecording();
 		final byte[] screenshot = ((TakesScreenshot) _driver.driver()).getScreenshotAs(OutputType.BYTES);
 		cenario.embed(screenshot, "image/png");	
 		_driver.fecharNavegador();			
