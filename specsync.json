@@ -1,0 +1,7 @@
+{
+  "$schema": "http://schemas.specsolutions.eu/specsync4azuredevops-config-latest.json",
+  "remote": {
+    "projectUrl": "https://fabiotestproject.visualstudio.com/FabioAlvesProject",
+    "user": "g5kfentb33imftr4x6birnahwyuowt6wsb6gja36vlmnpis7h4oa"
+  }
+}

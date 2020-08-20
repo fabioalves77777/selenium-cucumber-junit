@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>SpecSync.AzureDevOps.Console</id>
+    <version>3.0.0</version>
+    <title>Console App for SpecSync for Azure DevOps (for .NET Framework v4.*)</title>
+    <authors>Spec Solutions</authors>
+    <owners>Spec Solutions</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="file">EULA.md</license>
+    <licenseUrl>https://aka.ms/deprecateLicenseUrl</licenseUrl>
+    <icon>SpecSync-Icon.png</icon>
+    <projectUrl>http://speclink.me/specsync</projectUrl>
+    <description>Console App for SpecSync for Azure DevOps (for .NET Framework v4.*). For systems with .NET Core v3 installed, we recommend to install SpecSync.AzureDevOps as a .NET Core tool. 
+      SpecSync for Azure DevOps is a synchronization tool that synchronizes Gherkin feature files with Azure DevOps (TFS/VSTS).</description>
+    <summary>Console App for SpecSync for Azure DevOps (for .NET Framework v4.*). For systems with .NET Core v3 installed, we recommend to install SpecSync.AzureDevOps as a .NET Core tool.</summary>
+    <releaseNotes>See http://speclink.me/specsynclog for detailed change history.</releaseNotes>
+    <copyright>Copyright © 2016-2020 Spec Solutions</copyright>
+    <language>en-US</language>
+    <tags>specflow cucumber bdd azure-devops tfs mtm vsts vso microsoft-test-manager</tags>
+  </metadata>
+</package>

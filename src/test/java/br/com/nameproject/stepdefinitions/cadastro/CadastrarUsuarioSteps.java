@@ -33,7 +33,7 @@ public class CadastrarUsuarioSteps {
 
 	@Dado("E que o usuario informe os dados necessarios para cadastrar")
 	public void e_que_o_usuario_informe_os_dados_necessarios_para_cadastro(DataTable table) {
-		cadastro.cadastrarUsuario(table.cell(0, 0), table.cell(0, 1), table.cell(0, 2));
+		cadastro.cadastrarUsuario(table.cell(1, 0), table.cell(1, 1), table.cell(1, 2));
 	}
 	
 	@Dado("E que o usuario informe os dados necessarios para cadastro")

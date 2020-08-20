@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">
+  <Relationship Type="http://schemas.microsoft.com/packaging/2010/07/manifest" Target="/SpecSync.AzureDevOps.Console.nuspec" Id="R08F1FFC11CBF5392" />
+  <Relationship Type="http://schemas.openxmlformats.org/package/2006/relationships/metadata/core-properties" Target="/package/services/metadata/core-properties/f90977a8aa814748b55eec712f97f4f6.psmdcp" Id="R3824CA7704A877E8" />
+</Relationships>

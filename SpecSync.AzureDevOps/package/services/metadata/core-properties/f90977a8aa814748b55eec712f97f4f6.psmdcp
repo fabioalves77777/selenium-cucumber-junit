@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<coreProperties xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.openxmlformats.org/package/2006/metadata/core-properties">
+  <dc:creator>Spec Solutions</dc:creator>
+  <dc:description>Console App for SpecSync for Azure DevOps (for .NET Framework v4.*). For systems with .NET Core v3 installed, we recommend to install SpecSync.AzureDevOps as a .NET Core tool. 
+      SpecSync for Azure DevOps is a synchronization tool that synchronizes Gherkin feature files with Azure DevOps (TFS/VSTS).</dc:description>
+  <dc:identifier>SpecSync.AzureDevOps.Console</dc:identifier>
+  <version>3.0.0</version>
+  <keywords>specflow cucumber bdd azure-devops tfs mtm vsts vso microsoft-test-manager</keywords>
+  <lastModifiedBy>NuGet, Version=5.6.0.5, Culture=neutral, PublicKeyToken=31bf3856ad364e35;Microsoft Windows NT 10.0.18363.0;.NET Framework 4.7.2</lastModifiedBy>
+</coreProperties>

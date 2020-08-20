@@ -1,0 +1,165 @@
+{
+  "$schema": "http://schemas.specsolutions.eu/specsync4azuredevops-config-latest.json",
+
+  // *** SpecSync for Azure DevOps config file sample ***
+  //
+  // This file shows the different configuration settings of
+  // SpecSync for Azure DevOps v2.
+  // Most of the settings have default values, the only setting you have to
+  // specify is 'remote/projectUrl'.
+  // Some of these settings can be overriden from the command line interface of
+  // the synchronization tool (SpecSync4AzureDevOps.exe).
+  //
+  // By default the config file should be named as 'specsync.json'. You can use
+  // different file names, but in that case you have to provide the path for
+  // the config file for the synchronization tool.
+  //
+  // Open the SpecSync config files in Visual Studio (or other editor that
+  // supports JSON schema, like Visual Studio Code) to get auto-completion for
+  // editing and documentation hints if you hover your mouse over a setting.
+  // The "latest" schema is cached by Visual Studio. To force reloading the
+  // schema after a release, invoke "Reload Schemas" from the context menu and
+  // reopen the file.
+  //
+  // Check documentation of the configuration options at
+  // http://speclink.me/specsyncconfig.
+
+  "toolSettings": {
+    "licensePath": "mylicensefile.lic",
+    "disableStats": false,
+    "outputLevel": "normal",
+    "ignoreParentConfig": false
+  },
+  "knownRemotes": [
+    {
+      // by specifying the PAT in the user-specific config, you can skip listing the credentials in the project config
+      "projectUrl": "https://myaccount.visualstudio.com/*",
+      "user": "doi23dcoisp4doco43po5oi5iup6oip5o6ip56ipi5p6oi56"
+    }
+  ],
+  "local": {
+    "featureFileSource": {
+      "type": "projectFile",
+      "filePath": "MyProject.Specs\\MyProject.Specs.csproj"
+    },
+
+    "tags": "@done and not (@ignored or @planned)"
+  },
+  "remote": {
+    "projectUrl": "https://myaccount.visualstudio.com/MyProject",
+    "user": "myuser",
+    "password": "%MYPWD%",
+    "testSuite": {
+      "id": 2345
+    }
+  },
+  "synchronization": {
+    "disableLocalChanges": false,
+    "testCaseTagPrefix": "tc",
+
+    "pull": {
+      "enabled": true,
+      "enableCreatingScenariosForNewTestCases": false
+    },
+
+    "automation": {
+      "enabled": true,
+      "testExecutionStrategy": "assemblyBasedExecution",
+      "skipForTags": "@manual"
+    },
+
+    "state": {
+      "setValueOnChangeTo": "Design"
+    },
+
+    "areaPath": {
+      "mode": "setOnLink",
+      "value": "\\MyArea"
+    },
+    "iterationPath": {
+      "mode": "setOnLink",
+      "value": "\\Iteration1"
+    },
+    "links": [
+      {
+        "targetWorkItemType": "ProductBacklogItem",
+        "tagPrefix": "pbi",
+        "relationship": "Child",
+        "mode": "createIfMissing"
+      },
+      {
+        "tagPrefix": "bug"
+      }
+    ],
+    "format": {
+      "useExpectedResult": false,
+      "syncDataTableAsText": false,
+      "prefixBackgroundSteps": true,
+      "prefixTitle": true
+    }
+  },
+  "publishTestResults": {
+    "treatInconclusiveAs": "NotExecuted",
+    "runName": "Automated Test Results",
+    "runComment": "Results of Project A",
+    "testResultComment": "CI result",
+    "testConfiguration": {
+      "name": "Windows 10"
+    },
+    "testResult": {
+      "filePath": "test-result.trx",
+      "fileFormat": "trx"
+    },
+    "testSuite": {
+      "name": "My-test-suite-for-publish"
+    }
+  },
+  "specFlow": {
+    "specFlowGeneratorFolder": "packages\\SpecFlow.2.3.0\\tools",
+    "scenarioOutlineAutomationWrappers": "iterateThroughExamples",
+    "wrapperMethodPrefix": "_SpecSyncWrapper_",
+    "wrapperMethodCategory": "SpecSyncWrapper"
+  },
+  "customizations": {
+    "branchTag": {
+      "enabled": true,
+      "prefix": "tc.mybranch"
+    },
+    "fieldDefaults": {
+      "enabled": true,
+      "defaultValues": {
+        "MyCompany.MyCustomField": "Default 1",
+        "MyCompany.OtherCustomField": "Default 2"
+      }
+    },
+    "ignoreTestCaseSteps": {
+      "enabled": true,
+      "ignoredPrefixes": [ "COMMENT" ]
+    },
+    "customFieldUpdates": {
+      "enabled": true,
+      "updates": {
+        "System.Description": "Synchronized from feature {feature-name}{br}{feature-description}"
+      }
+    },
+    "tagTextMapTransformation": {
+      "enabled": true,
+      "textMap": {
+        "=": "-",
+        "__": " "
+      }
+    },
+    "multiSuitePublishTestResults": {
+      "enabled": true,
+      "testPlanId": 567,
+      "suites": [
+        "SuiteA",
+        "SuiteB",
+        "#3456"
+      ],
+      "includeSubSuites": true,
+      "publishToRequirementBasedTestSuites": true,
+      "linkTagPrefixes": [ "bug" ]
+    }
+  }
+}

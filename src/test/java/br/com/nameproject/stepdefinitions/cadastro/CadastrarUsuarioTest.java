@@ -17,4 +17,4 @@ import io.cucumber.junit.CucumberOptions;
 		monochrome = true, 
 		dryRun = false
 )
-public class CadastrarUsuario { }
+public class CadastrarUsuarioTest { }
