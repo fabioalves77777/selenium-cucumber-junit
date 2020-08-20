@@ -16,7 +16,7 @@ public class PaginaContaIncluir extends TableFactory {
 	public PaginaContaListar acessarListaContas() {
         clicar(driver(), By.xpath("//a[contains(text(),'Contas')]"));
         clicar(driver(), By.xpath("//a[contains(text(),'Listar')]"));
-        elementoExiste(driver(), By.xpath("//th[contains(text(),'Conta')]"), "Erro ao acessar a p·gina de listar contas");
+        elementoExiste(driver(), By.xpath("//th[contains(text(),'Conta')]"), "Erro ao acessar a p√°gina de listar contas");
         return new PaginaContaListar(driver());
     }
 
@@ -29,7 +29,7 @@ public class PaginaContaIncluir extends TableFactory {
         elementoExiste(
     		driver(),
             By.xpath("//div[contains(text(),'" + Mensagens.ContaAdicionadaComSucesso + "')]"),
-            "N„o foi apresentada mensagem de conta adicionada com sucesso!"
+            "N√£o foi apresentada mensagem de conta adicionada com sucesso!"
         );
         validarInclusaoConta(conta);
     }
@@ -40,7 +40,7 @@ public class PaginaContaIncluir extends TableFactory {
             elementoExiste(
         		driver(),
                 By.xpath("//div[contains(text(),'" + Mensagens.ContaObrigatorio + "')]"),
-                "N„o foi apresentada mensagem de nome da conta obrigatÛrio"
+                "N√£o foi apresentada mensagem de nome da conta obrigat√≥rio"
             );
         }            
     }
@@ -50,7 +50,7 @@ public class PaginaContaIncluir extends TableFactory {
         elementoExiste(
     		driver(),
             By.xpath("//div[contains(text(),'" + Mensagens.ContaJaIncluida + "')]"),
-            "N„o foi apresentada mensagem de registro duplicado"
+            "N√£o foi apresentada mensagem de registro duplicado"
         );
     }
 
@@ -59,7 +59,7 @@ public class PaginaContaIncluir extends TableFactory {
         for (WebElement tr : retornarTrs()) {
             String nomeConta = retornarTd(tr, 0).getText();
             if (nomeConta.equals(conta)) return;
-            verificarUltimoRegistro(index++, "Conta n„o foi adicionada corretamente");
+            verificarUltimoRegistro(index++, "Conta n√£o foi adicionada corretamente");
         }
     }
 

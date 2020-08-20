@@ -20,13 +20,13 @@ public class PaginaContaListar extends TableFactory {
                 clicar(retornarButtonLink(retornarTd(tr, 1), 0));
                 break;
             }
-            verificarUltimoRegistro(index++, "N„o foi encontrada a conta com o nome 'Conta para alterar'");
+            verificarUltimoRegistro(index++, "N√£o foi encontrada a conta com o nome 'Conta para alterar'");
         }
         return new PaginaContaAlterar(driver());
     }
 
     /**
-     * MÈtodo para solicitar exclus„o de conta em uso com o nome "Conta com movimentacao"
+     * Metodo para solicitar exclusao de conta em uso com o nome "Conta com movimentacao"
      */
     public void realizarExclusaoContaComMovimentacao() {
         int index = 0;
@@ -35,23 +35,23 @@ public class PaginaContaListar extends TableFactory {
                 clicar(retornarButtonLink(retornarTd(tr, 1), 1));
                 break;
             }
-            verificarUltimoRegistro(index++, "N„o foi encontrada a conta com o nome 'Conta com movimentacao'");
+            verificarUltimoRegistro(index++, "N√£o foi encontrada a conta com o nome 'Conta com movimentacao'");
         }
     }
 
     /**
-     * MÈtodo para validar exclus„o de conta em uso da conta com o nome "Conta com movimentacao"
+     * Metodo para validar exclusao de conta em uso da conta com o nome "Conta com movimentacao"
      */
     public void validarExclusaoContaComMovimentacao() {
         elementoExiste(
             driver(),
             By.xpath("//div[contains(text(),'" + Mensagens.ContaComMovimentacoes + "')]"),
-            "N„o foi apresentada mensagem de exclus„o de conta n„o permitida!"
+            "N√£o foi apresentada mensagem de exclus√£o de conta n√£o permitida!"
         );
     }
 
     /**
-     * MÈtodo para excluir conta
+     * Metodo para excluir conta
      */
     public void realizarExclusaoConta(String conta) {
         for (int i = 0; i < retornarTrs().size(); i++) {
@@ -63,13 +63,13 @@ public class PaginaContaListar extends TableFactory {
     }
 
     /**
-     * MÈtodo para verificar exclus„o de conta
+     * Metodo para verificar exclus√£o de conta
      */
     public void verificarContaExcluidaComSucesso() {
         elementoExiste(
             driver(),
             By.xpath("//div[contains(text(),'" + Mensagens.ContaRemovidaComSucesso + "')]"),
-            "N„o foi apresentada mensagem de exclus„o realizada com sucesso!"
+            "N√£o foi apresentada mensagem de exclus√£o realizada com sucesso!"
         );
     }
 

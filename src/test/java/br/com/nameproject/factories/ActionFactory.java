@@ -29,7 +29,7 @@ public class ActionFactory {
 	public int ElementoExistente = 7;
 
 	/**
-	 * Método para esperar a existência do elemento HTML
+	 * Metodo para esperar a existencia do elemento HTML
 	 */
 	public WebElement esperaExistencia(WebDriver driver, By by) {
 		for (int i = 0; i < TempoLimiteEspera; i++) {
@@ -43,7 +43,7 @@ public class ActionFactory {
 	}
 
 	/**
-	 * Método para esperar a existência do elemento HTML e inserir texto
+	 * Metodo para esperar a existï¿½ncia do elemento HTML e inserir texto
 	 */
 	public void esperaExistenciaSendKeys(WebDriver driver, By by, String text) {
 		for (int i = 0; i < TempoLimiteEspera; i++) {
@@ -60,7 +60,7 @@ public class ActionFactory {
 	}
 	
 	/**
-	 * Método para esperar a existência do elemento HTML e inserir texto
+	 * Metodo para esperar a existencia do elemento HTML e inserir texto
 	 */
 	public void esperaExistenciaSendKeys(WebElement element, String text) {
 		for (int i = 0; i < TempoLimiteEspera; i++) {
@@ -77,7 +77,7 @@ public class ActionFactory {
 	}
 
 	/**
-	 * Método para esperar a existência do elemento HTML e inserir key
+	 * Metodo para esperar a existencia do elemento HTML e inserir key
 	 */
 	public void esperaExistenciaSendKeys(WebDriver driver, By by, Keys key) {
 		for (int i = 0; i < TempoLimiteEspera; i++) {
@@ -92,7 +92,7 @@ public class ActionFactory {
 	}
 	
 	/**
-	 * Método para esperar a existência do elemento HTML e inserir key
+	 * Metodo para esperar a existencia do elemento HTML e inserir key
 	 */
 	public void esperaExistenciaSendKeys(WebElement element, Keys key) {
 		for (int i = 0; i < TempoLimiteEspera; i++) {
@@ -107,7 +107,7 @@ public class ActionFactory {
 	}
 
 	/**
-	 * Método para esperar a existência do elemento HTML e clicar
+	 * Metodo para esperar a existencia do elemento HTML e clicar
 	 */
 	public void esperaExistenciaAndClick(WebDriver driver, By by) {
 		for (int i = 0; i < TempoLimiteEspera; i++) {
@@ -126,7 +126,7 @@ public class ActionFactory {
 	}
 	
 	/**
-	 * Método para esperar a existência do elemento HTML e clicar
+	 * Metodo para esperar a existencia do elemento HTML e clicar
 	 */
 	public void esperaExistenciaAndClick(WebElement element) {
 		for (int i = 0; i < TempoLimiteEspera; i++) {
@@ -145,7 +145,7 @@ public class ActionFactory {
 	}
 
 	/**
-	 * Método para esperar a existência de selectByVisibleText
+	 * Metodo para esperar a existencia de selectByVisibleText
 	 */
 	public void esperaSelectByVisibleText(Select select, String texto) {
 		for (int i = 0; i < TempoLimiteEspera; i++) {
@@ -164,7 +164,7 @@ public class ActionFactory {
 	}
 
 	/**
-	 * Método para esperar a existência de selectByIndex
+	 * Metodo para esperar a existencia de selectByIndex
 	 */
 	public void esperaSelectByIndex(Select select, int index) {
 		for (int i = 0; i < TempoLimiteEspera; i++) {
@@ -183,7 +183,7 @@ public class ActionFactory {
 	}
 
 	/**
-	 * Método que verifica se elemento existe
+	 * Metodo que verifica se elemento existe
 	 */
 	public boolean elementoExiste(WebDriver driver, By by) {
 		for (int i = 0; i < ElementoExistente; i++) {
@@ -198,7 +198,7 @@ public class ActionFactory {
 	}
 	
 	/**
-	 * Método que verifica se elemento existe
+	 * Metodo que verifica se elemento existe
 	 */
 	public boolean elementoExiste(WebDriver driver, By by, int timeout) {
 		for (int i = 0; i < timeout; i++) {
@@ -213,7 +213,7 @@ public class ActionFactory {
 	}
 
 	/**
-	 * Método que verifica se elemento existe
+	 * Metodo que verifica se elemento existe
 	 */
 	public void elementoExiste(WebDriver driver, By by, String texto) {
 		if (!elementoExiste(driver, by)) {
@@ -222,7 +222,7 @@ public class ActionFactory {
 	}
 
 	/**
-	 * Método que retorna coleção de elementos
+	 * Metodo que retorna colecao de elementos
 	 */
 	public List<WebElement> colecaoElementos(WebDriver driver, By by) {
 		for (int i = 0; i < TempoLimiteEspera; i++) {
@@ -237,14 +237,14 @@ public class ActionFactory {
 	}
 
 	/**
-	 * Método para limpar um elemento
+	 * Metodo para limpar um elemento
 	 */
 	public void limparTexto(WebDriver driver, By by) {
 		esperaExistencia(driver, by).clear();
 	}
 
 	/**
-	 * Método para inserir texto em elemento
+	 * Metodo para inserir texto em elemento
 	 */
 	public void inserirTexto(WebDriver driver, By by, String texto) {
 		if (!texto.isEmpty())
@@ -252,14 +252,14 @@ public class ActionFactory {
 	}
 
 	/**
-	 * Método para inserir texto em elemento 
+	 * Metodo para inserir texto em elemento 
 	 */
 	public void inserirTexto(WebDriver driver, By by, Keys key) {
 		esperaExistenciaSendKeys(driver, by, key);
 	}
 	
 	/**
-	 * Método para inserir texto em elemento
+	 * Metodo para inserir texto em elemento
 	 */
 	public void inserirTexto(WebElement element, String texto) {
 		if (!texto.isEmpty())
@@ -267,14 +267,14 @@ public class ActionFactory {
 	}
 
 	/**
-	 * Método para inserir texto em elemento 
+	 * Metodo para inserir texto em elemento 
 	 */
 	public void inserirTexto(WebElement element, Keys key) {
 		esperaExistenciaSendKeys(element, key);
 	}
 	
 	/**
-	 * Método para inserir texto em elemento pelo atributo value
+	 * Metodo para inserir texto em elemento pelo atributo value
 	 */
 	public void inserirTextoAttr(WebDriver driver, WebElement elemento, String texto) {
 		((JavascriptExecutor) driver).executeScript(
@@ -284,21 +284,21 @@ public class ActionFactory {
     }
 
 	/**
-	 * Método para clicar em um elemento
+	 * Metodo para clicar em um elemento
 	 */
 	public void clicar(WebDriver driver, By by) {
 		esperaExistenciaAndClick(driver, by);
 	}
 	
 	/**
-	 * Método para clicar em um elemento
+	 * Metodo para clicar em um elemento
 	 */
 	public void clicar(WebElement element) {
 		esperaExistenciaAndClick(element);
 	}
 
 	/**
-	 * Método para selecionar elemento pelo texto
+	 * Metodo para selecionar elemento pelo texto
 	 */
 	public void selecionar(WebDriver driver, By by, String texto) {
 		if(texto.equals("") || texto == null) { return;	}
@@ -307,7 +307,7 @@ public class ActionFactory {
 	}
 	
 	/**
-	 * Método para selecionar elemento pelo texto
+	 * Metodo para selecionar elemento pelo texto
 	 */
 	public void selecionar(WebElement element, String texto) {
 		if(texto.equals("") || texto == null) { return;	}
@@ -316,7 +316,7 @@ public class ActionFactory {
 	}
 
 	/**
-	 * Método para selecionar elemento pelo indice
+	 * Metodo para selecionar elemento pelo indice
 	 */
 	public void selecionar(WebDriver driver, By by, int index) {
 		Select select = new Select(esperaExistencia(driver, by));
@@ -324,7 +324,7 @@ public class ActionFactory {
 	}
 	
 	/**
-	 * Método para selecionar elemento pelo indice
+	 * Metodo para selecionar elemento pelo indice
 	 */
 	public void selecionar(WebElement element, int index) {
 		Select select = new Select(element);
@@ -332,28 +332,28 @@ public class ActionFactory {
 	}
 
 	/**
-	 * Método que retorna o texto do elemento
+	 * Metodo que retorna o texto do elemento
 	 */
 	public String retornarTexto(WebDriver driver, By by) {
 		return esperaExistencia(driver, by).getText();
 	}
 	
 	/**
-	 * Método que retorna o texto do elemento
+	 * Metodo que retorna o texto do elemento
 	 */
 	public String retornarTextoAttr(WebDriver driver, By by) {
 		return esperaExistencia(driver, by).getAttribute("value");
 	}
 
 	/**
-	 * Método que verifica se texto atual Ã© igual ao texto esperado
+	 * Metodo que verifica se texto atual Ã© igual ao texto esperado
 	 */
 	public void VerificarTexto(String msgErro, String msgEsperada, String msgAtual) {
 		assertEquals(msgErro, msgEsperada, msgAtual);
 	}
 
 	/**
-	 * Método para verificar se texto do elemento contÃ©m no texto esperado
+	 * Metodo para verificar se texto do elemento contÃ©m no texto esperado
 	 */
 	public void ContemTexto(String msgErro, String msgEsperada, String msgAtual) {
 		assertTrue(msgErro, msgAtual.contains(msgEsperada));
@@ -368,7 +368,7 @@ public class ActionFactory {
 	}
 
 	/**
-	 * Método que troca de aba
+	 * Metodo que troca de aba
 	 */
 	public void trocarAba(WebDriver driver, int index) {
 		ArrayList<String> tabs = new ArrayList<String> (driver.getWindowHandles());
@@ -376,7 +376,7 @@ public class ActionFactory {
 	}
 	
 	/**
-	 * Método que anexa arquivo manualmente
+	 * Metodo que anexa arquivo manualmente
 	 */
 	public void anexarArquivo(WebDriver driver, String text) {
 		StringSelection file = new StringSelection(text);
@@ -396,7 +396,7 @@ public class ActionFactory {
 	}
 	
 	/**
-	 * Método que espera a pagina carregar completamente
+	 * Metodo que espera a pagina carregar completamente
 	 */
 	public void esperaPaginaCarregar(WebDriver driver) {		
 		WebDriverWait wait = new WebDriverWait(driver, 1);

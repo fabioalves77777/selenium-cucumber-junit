@@ -13,35 +13,35 @@ public class PaginaInicial extends DriverFactory {
 	}
 
 	/**
-	 * MÈtodo para voltar as movimentaÁıes padr„o
+	 * Metodo para voltar as movimenta√ß√µes padr√£o
 	 */
     public PaginaInicial resetarMovimentacoes() {
         clicar(driver(), By.xpath("//a[contains(text(),'reset')]"));
         elementoExiste(
     		driver(),
             By.xpath("//div[contains(text(),'" + Mensagens.ResetarComSucesso + "')]"),
-            "Erro ao resetar as movimentaÁıes!"
+            "Erro ao resetar as movimenta√ß√µes!"
         );
         return this;
     }
 
     /**
-     * MÈtodo para acessar a tela de adicionar conta
+     * Metodo para acessar a tela de adicionar conta
      */
     public PaginaContaIncluir acessarAdicionarConta() {
         clicar(driver(), By.xpath("//a[contains(text(),'Contas')]"));
         clicar(driver(), By.xpath("//a[contains(text(),'Adicionar')]"));
-        elementoExiste(driver(), By.id("nome"), "Erro ao acessar a p·gina de adicionar conta");
+        elementoExiste(driver(), By.id("nome"), "Erro ao acessar a p√°gina de adicionar conta");
         return new PaginaContaIncluir(driver());
     }
 
     /**
-     * MÈtodo para acessar a tela de listar contas
+     * Metodo para acessar a tela de listar contas
      */
     public PaginaContaListar acessarListaContas() {
     	clicar(driver(), By.xpath("//a[contains(text(),'Contas')]"));
     	clicar(driver(), By.xpath("//a[contains(text(),'Listar')]"));
-        elementoExiste(driver(), By.xpath("//th[contains(text(),'Conta')]"), "Erro ao acessar a p·gina de listar contas");
+        elementoExiste(driver(), By.xpath("//th[contains(text(),'Conta')]"), "Erro ao acessar a p√°gina de listar contas");
         return new PaginaContaListar(driver());
     }
 

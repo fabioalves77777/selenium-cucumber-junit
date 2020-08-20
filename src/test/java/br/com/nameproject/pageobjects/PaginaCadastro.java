@@ -24,7 +24,7 @@ public class PaginaCadastro extends DriverFactory {
         elementoExiste(
         	driver(),
             By.xpath("//div[contains(text(),'" + Mensagens.UsuarioCadastrado + "')]"),                
-            "Ocorreu um erro ao realizar o cadastro do usu·rio"
+            "Ocorreu um erro ao realizar o cadastro do usu√°rio"
         );
     }
 
@@ -33,22 +33,22 @@ public class PaginaCadastro extends DriverFactory {
         if(nome.isEmpty()) {
         	elementoExiste(
             	driver(),
-                By.xpath("//div[contains(text(),'Nome È um " + Mensagens.CampoObrigorio + "')]"),
-                "N„o foi apresentada mensagem de nome obrigatÛrio"
+                By.xpath("//div[contains(text(),'Nome √© um " + Mensagens.CampoObrigorio + "')]"),
+                "N√£o foi apresentada mensagem de nome obrigat√≥rio"
             );
         }
         if (email.isEmpty()) {
         	elementoExiste(
             	driver(),
-                By.xpath("//div[contains(text(),'Email È um " + Mensagens.CampoObrigorio + "')]"),
-                "N„o foi apresentada mensagem de email obrigatÛrio"
+                By.xpath("//div[contains(text(),'Email √© um " + Mensagens.CampoObrigorio + "')]"),
+                "N√£o foi apresentada mensagem de email obrigat√≥rio"
             );
         }
         if (senha.isEmpty()) {
         	elementoExiste(
         		driver(),
-                By.xpath("//div[contains(text(),'Senha È um " + Mensagens.CampoObrigorio + "')]"),
-                "N„o foi apresentada mensagem de senha obrigatÛria"
+                By.xpath("//div[contains(text(),'Senha √© um " + Mensagens.CampoObrigorio + "')]"),
+                "N√£o foi apresentada mensagem de senha obrigat√≥ria"
             );
         }                
     }
@@ -58,7 +58,7 @@ public class PaginaCadastro extends DriverFactory {
     	elementoExiste(
         		driver(),
             By.xpath("//div[contains(text(),'" + Mensagens.EmailJaUtilizado + "')]"),
-            "N„o foi apresentada mensagem de registro duplicado"
+            "N√£o foi apresentada mensagem de registro duplicado"
         );
     }
     

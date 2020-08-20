@@ -22,7 +22,7 @@ public class PaginaContaAlterar extends TableFactory {
         elementoExiste(
     		driver(),
             By.xpath("//div[contains(text(),'" + Mensagens.ContaAlteradaComSucesso + "')]"),
-            "Não foi apresentada mensagem de conta alterada com sucesso!"
+            "NÃ£o foi apresentada mensagem de conta alterada com sucesso!"
         );
         validarAlteracaoConta(conta);
     }
@@ -33,7 +33,7 @@ public class PaginaContaAlterar extends TableFactory {
         elementoExiste(
     		driver(),
             By.xpath("//div[contains(text(),'" + Mensagens.ContaObrigatorio + "')]"),
-            "Não foi apresentada mensagem de nome da conta obrigatório"
+            "NÃ£o foi apresentada mensagem de nome da conta obrigatÃ³rio"
         );
     }
 
@@ -42,7 +42,7 @@ public class PaginaContaAlterar extends TableFactory {
         elementoExiste(
     		driver(),
             By.xpath("//div[contains(text(),'" + Mensagens.ContaJaIncluida + "')]"),
-            "Não foi apresentada mensagem de registro duplicado"
+            "NÃ£o foi apresentada mensagem de registro duplicado"
         );
     }
 
@@ -50,7 +50,7 @@ public class PaginaContaAlterar extends TableFactory {
         for (int index = 0; index < retornarTrs().size(); index++) {
             String nomeConta = retornarTd(retornarTr(index), 0).getText();
             if (nomeConta.equals(conta)) return;
-            verificarUltimoRegistro(index, "Conta não foi alterada corretamente");
+            verificarUltimoRegistro(index, "Conta nÃ£o foi alterada corretamente");
         }
     }
 

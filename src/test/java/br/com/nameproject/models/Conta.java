@@ -5,7 +5,7 @@ import br.com.nameproject.support.Utilitario;
 public class Conta {
 
 	public Conta() {
-		this.nomeIncluir = "Água " + Utilitario.retornaDataHora();
+		this.nomeIncluir = "Agua " + Utilitario.retornaDataHora();
         this.nomeAlterar = "Luz " + Utilitario.retornaDataHora();
         this.nomeExcluir = "Conta para alterar";
 	}

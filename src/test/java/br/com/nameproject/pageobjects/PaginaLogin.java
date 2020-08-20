@@ -19,12 +19,12 @@ public class PaginaLogin extends DriverFactory {
             navegar(ConfiguracaoAmbiente.UrlTst);
         else if (ambiente.equals(EnumAmbiente.HML))
         	navegar(ConfiguracaoAmbiente.UrlHml);
-        elementoExiste(driver(), By.id("email"), "Erro ao acessar a p·gina de autenticaÁ„o");
+        elementoExiste(driver(), By.id("email"), "Erro ao acessar a p√°gina de autentica√ß√£o");
         return this;
     }
 
     public PaginaCadastro acessarCadastroUsuario() {
-        clicar(driver(), By.xpath("//a[contains(text(),'Novo usu·rio?')]"));
+        clicar(driver(), By.xpath("//a[contains(text(),'Novo usu√°rio?')]"));
         return new PaginaCadastro(driver());
     }
 
@@ -49,7 +49,7 @@ public class PaginaLogin extends DriverFactory {
         elementoExiste(
     		driver(),
             By.xpath("//div[contains(text(),'" + Mensagens.LoginInvalido + "')]"),
-            "N„o foi apresentada mensagem de login inv·lido"
+            "N√£o foi apresentada mensagem de login inv√°lido"
         );
     }
 
@@ -58,15 +58,15 @@ public class PaginaLogin extends DriverFactory {
         if (email.isEmpty()) {
             elementoExiste(
         		driver(),
-                By.xpath("//div[contains(text(),'Email È um " + Mensagens.CampoObrigorio + "')]"),
-                "N„o foi apresentada mensagem de email obrigatÛrio"
+                By.xpath("//div[contains(text(),'Email √© um " + Mensagens.CampoObrigorio + "')]"),
+                "N√£o foi apresentada mensagem de email obrigat√≥rio"
             );
         }
         if (senha.isEmpty()) {
             elementoExiste(
         		driver(),
-                By.xpath("//div[contains(text(),'Senha È um " + Mensagens.CampoObrigorio + "')]"),
-                "N„o foi apresentada mensagem de senha obrigatÛria"
+                By.xpath("//div[contains(text(),'Senha √© um " + Mensagens.CampoObrigorio + "')]"),
+                "N√£o foi apresentada mensagem de senha obrigat√≥ria"
             );
         }
     }

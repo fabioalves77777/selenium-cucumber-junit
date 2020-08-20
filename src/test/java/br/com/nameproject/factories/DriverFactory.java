@@ -39,7 +39,7 @@ public class DriverFactory extends ActionFactory {
 	}
 
 	/**
-	 * MÈtodo para instanciar o driver automaticamente com o WebDriverManager
+	 * Metodo para instanciar o driver automaticamente com o WebDriverManager
 	 */
 	public void instanciarDriverAutomatico(ConfiguracaoAmbiente configuracao) {
 		if (configuracao.getNavegador().equals(EnumNavegador.FIREFOX)) {
@@ -61,13 +61,13 @@ public class DriverFactory extends ActionFactory {
 				}
 			}
 		} else {
-			Assert.fail("Navegador informado n„o faz parte da configuraÁ„o");
+			Assert.fail("Navegador informado n√£o faz parte da configura√ß√£o");
 		}
 
 	}
 
 	/**
-	 * MÈtodo para instanciar o driver manualmente
+	 * Metodo para instanciar o driver manualmente
 	 */
 	public void instanciarDriverManual(ConfiguracaoAmbiente configuracao) {
 		if (configuracao.getNavegador().equals(EnumNavegador.FIREFOX)) {
@@ -89,7 +89,7 @@ public class DriverFactory extends ActionFactory {
 				}
 			}
 		} else {
-			Assert.fail("Navegador informado n„o faz parte da configuraÁ„o");
+			Assert.fail("Navegador informado n√£o faz parte da configura√ß√£o");
 		}
 	}
 	
